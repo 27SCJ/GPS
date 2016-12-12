@@ -25,16 +25,16 @@ SELECT * FROM localizacao ORDER BY codigo DESC LIMIT 20;
    <th>Codigo</th>
    <th>Nome</th>
    <th>Local</th>
-   <th>Longitude</th>
-   <th>Latitude</th>
+   <th>Ver no mapa</th>
 </tr>
 <c:forEach var="row" items="${result.rows}">
 <tr>
    <td><c:out value="${row.codigo}"/></td>
    <td><c:out value="${row.nome}"/></td>
    <td><c:out value="${row.local}"/></td>
-   <td><c:out value="${row.longitude}"/></td>
-   <td><c:out value="${row.latitude}"/></td>
+   <td align="center">
+   	
+   <a href="ver.jsp?codigo=${row.codigo}"><img width="16px" height="16px" src="resources/images/marker.png"/></a></td>
 </tr>
 </c:forEach>
 </table>
